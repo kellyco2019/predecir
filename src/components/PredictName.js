@@ -8,8 +8,7 @@ import axios from 'axios'
         const [loading, setLoading] = useState(false)
         const [error, setError] = useState(false)
          
-    
-    //useEffect(() => {
+
     async function handleSubmit(e) {
         e.preventDefault() 
            
@@ -17,7 +16,7 @@ import axios from 'axios'
         const { data } = await axios({
         method: 'GET',
         baseURL: `https://api.agify.io`,
-        url: `?name=${name}&country_id=${place}` 
+        params: `?name=${name}&country_id=${place}` 
      }) 
       setData(data)
       setLoading(false)  
@@ -28,8 +27,6 @@ import axios from 'axios'
     }
       
     }
-  
-  //  },[])
     
     if (loading) return <p>Loading...</p>
     if (error) return <p>Opsss something ent Wrong...</p>
