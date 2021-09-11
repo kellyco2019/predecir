@@ -1,14 +1,14 @@
-
+import logo from './logo.svg';
 import './App.css';
-import PredictNameMany from './components/PredicNameMany';
-import PredictNameOne from './components/PredictNameOne';
+import PredictName from './components/PredictName';
 
 
 function App() {
 
   return (
     <div className="App">
-    <PredictNameMany/>
+     <PredictName/>
+    
     </div>
   );
 }
